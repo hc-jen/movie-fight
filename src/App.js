@@ -12,10 +12,76 @@ import Autocomplete from './Components/Autocomplete';
 import Summary from './Components/Summary';
 import WinnerSection from './Components/WinnerSection';
 
+const Tutorial = styled.div`
+    max-width: 50vw;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    span {
+      margin-top: 0px;
+    }
+  `
+
+  const Notification = styled.div`
+    margin-top: 20px !important;
+  `
+  const Results = styled.div`
+    max-height: 500px;
+    overflow-y: scroll;
+  `
+  const Title = styled.h1`
+    margin-left: 0px;
+    margin-top: 10px !important;
+  `
+  const Icon = styled.span`
+    margin-left: 15px;
+  `
+  const Hero = styled.section`
+    margin-bottom: 20px;
+  `
+
+  const HeroBody = styled.div`
+  `
+
+  const Container = styled.div`
+    margin: 10px;
+    max-width: 50%;
+    width: 40%;
+  `
+  const Wrapper = styled.div`
+  `
+
+  const ComparisonArea = styled.div`
+    display: flex;
+    flex-direction: row;
+  `
+  const RunComparisonButton = styled.button`
+    background-color: #00d1b2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    margin-bottom: 50px;
+ 
+    &:hover {
+      background-color: #008571;
+    }
+  `;
+
+  const CenteredContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  `
+  
 library.add(faFilm);
 
 const fetchData = async (searchTerm) => {
-  const response = await axios.get(`http://www.omdbapi.com/`, {
+  const response = await axios.get(`https://www.omdbapi.com/`, {
     params: {
       apikey: '31a2c4e4',
       s: searchTerm
@@ -148,71 +214,7 @@ function App() {
     setWinner(null)
   }
 
-  const Tutorial = styled.div`
-    max-width: 50vw;
-    text-align: center;
-    margin: auto;
-    margin-top: 50px;
-    span {
-      margin-top: 0px;
-    }
-  `
-
-  const Notification = styled.div`
-    margin-top: 20px !important;
-  `
-  const Results = styled.div`
-    max-height: 500px;
-    overflow-y: scroll;
-  `
-  const Title = styled.h1`
-    margin-left: 0px;
-    margin-top: 10px !important;
-  `
-  const Icon = styled.span`
-    margin-left: 15px;
-  `
-  const Hero = styled.section`
-    margin-bottom: 20px;
-  `
-
-  const HeroBody = styled.div`
-  `
-
-  const Container = styled.div`
-    margin: 10px;
-    max-width: 50%;
-    width: 40%;
-  `
-  const Wrapper = styled.div`
-  `
-
-  const ComparisonArea = styled.div`
-    display: flex;
-    flex-direction: row;
-  `
-  const RunComparisonButton = styled.button`
-    background-color: #00d1b2;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    margin-bottom: 50px;
- 
-    &:hover {
-      background-color: #008571;
-    }
-  `;
-
-  const CenteredContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    flex-direction: column;
-  `
+  
 
   return (
     <Wrapper>

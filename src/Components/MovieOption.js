@@ -26,7 +26,7 @@ const MovieImage = styled.img`
 export default function MovieOption({poster, title, year, className, updateInput, i, setSelectedMovieData}) {
   const handleOptionClick = async () => {
     updateInput(title);
-    const response = await axios.get(`http://www.omdbapi.com/`, {
+    const response = await axios.get(`https://www.omdbapi.com/`, {
       params: {
         apikey: '31a2c4e4',
         i: i,
