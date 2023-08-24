@@ -258,7 +258,7 @@ function App() {
         <Title className="title">
           Search For a Movie On Both Sides
         </Title>
-        <span>We will tell you which is best!</span>
+        <span>We will tell you which is the best!</span>
       </Tutorial>}
       <CenteredContainer>
         {selectedMovieData1&&selectedMovieData2&&!winner&&
