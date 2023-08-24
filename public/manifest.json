@@ -1,19 +1,29 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Movie Fight",
+  "name": "Movie Fight-Compare Your Favourite Movies",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icon@48.png",
+      "type": "image/png",
+      "sizes": "48x48"
     },
     {
-      "src": "logo192.png",
+      "src": "icon@96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icon@144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon@192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "icon@512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
