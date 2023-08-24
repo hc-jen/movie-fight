@@ -149,7 +149,7 @@ function App() {
   }
 
   const Tutorial = styled.div`
-    width: 600px;
+    max-width: 50vw;
     text-align: center;
     margin: auto;
     margin-top: 50px;
