@@ -54,10 +54,10 @@ function App() {
       </header>
       <section className="display-area">
         <div className="autocomplete-area">
-          <div className="column">
+          <div className="autocomplete-column">
             <Autocomplete setIsShowTutorial={setIsShowTutorial} column={"left"} selectedMovieData={selectedMovieData} setSelectedMovieData={setSelectedMovieData}/>
           </div>
-          <div className="column">
+          <div className="autocomplete-column">
             <Autocomplete setIsShowTutorial={setIsShowTutorial} column={"right"} selectedMovieData={selectedMovieData} setSelectedMovieData={setSelectedMovieData}/>
           </div>
         </div>

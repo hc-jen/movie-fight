@@ -39,31 +39,23 @@ header {
 .display-area {
   display: flex;
   flex-direction: column; /* Stack columns on mobile */
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
-  /* Styles for screens with a width of 768px and above */
-  .display-area {
-    flex-direction: column; /* Stack columns */
-  }
-  .styled-newsummary{
-    display: flex;
-    flex-direction: row;
-  }
-}
+
 
 .autocomplete-area {
   display: flex;
   flex-direction: row;
 }
-.column {
+.autocomplete-column {
   flex: 1;
   margin: 10px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 50vw;
+  width: 50%;
 }
 
 .summary-area {
@@ -93,9 +85,10 @@ header {
 }
 
 /* Autocomplete.js */
-.autocomplete-wrapper{
+.autocomplete-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%; /* Ensure autocomplete area takes full width */
 }
 
 input {
@@ -104,10 +97,12 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 95%; /* Input takes full width */
 }
 
 .dropdown {
   position: relative;
+  padding-right:1px;
 }
 
 .dropdown-menu {
@@ -120,6 +115,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
+  width: 100%;
 }
 
 /* MovieOption.js */
