@@ -18,7 +18,7 @@ export default function NewSummary({left, right}) {
           <div className="movie-statistics">
             <p className="movie-stat">
               {left.Awards?left.Awards:`N/A`}
-              <span>left.Awards</span>
+              <span>Awards</span>
             </p>
             <p className={`movie-stat ${parseInt(left.BoxOffice.replace(/\$/g,'').replace(/,/g,''))>parseInt(right.BoxOffice.replace(/\$/g,'').replace(/,/g,''))?"is-winner":"is-loser"}`}>
               {left.BoxOffice?left.BoxOffice:`N/A`}
