@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import axios from 'axios';
 import React from 'react';
 
-const StyledSummary = styled.div`
+/* const StyledSummary = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -73,45 +73,45 @@ const MovieStat = styled.p`
     color: #666;
     margin-left: 0px;
   }
-`;
+`; */
 
 
 
 export default function Summary({Title, Year, Genre, Plot, Poster, Awards, BoxOffice, Metascore, imdbRating, imdbVotes}) {
     
   return (
-      <StyledSummary>
-        <MovieInfo>
-          <MovieImage src={Poster === 'N/A' ? '' : Poster} alt={`Poster for ${Title}`} />
+      <div className="styled-summary">
+        <div className="movie-info">
+          <img className="movie-image" src={Poster === 'N/A' ? '' : Poster} alt={`Poster for ${Title}`} />
           <div>
-            <MovieTitle>{Title} ({Year})</MovieTitle>
-            <MovieGenre>{Genre}</MovieGenre>
-            <MoviePlot>{Plot}</MoviePlot>
+            <h1 className="movie-title">{Title} ({Year})</h1>
+            <h4 className="movie-genre">{Genre}</h4>
+            <p className="movie-plot">{Plot}</p>
           </div>
-        </MovieInfo>
+        </div>
 
-        <MovieStatistics>
-          <MovieStat>
+        <div className="movie-statistics">
+          <p className="movie-stat">
             {Awards?Awards:`N/A`}
             <span>Awards</span>
-          </MovieStat>
-          <MovieStat>
+          </p>
+          <p className="movie-stat">
             {BoxOffice?BoxOffice:`N/A`}
             <span>US Box Office</span>
-          </MovieStat>
-          <MovieStat>
+          </p>
+          <p className="movie-stat">
             {Metascore}
             <span>Metascore</span>
-          </MovieStat>
-          <MovieStat>
+          </p>
+          <p className="movie-stat">
             {imdbRating}
             <span>IMDB Rating</span>
-          </MovieStat>
-          <MovieStat>
+          </p>
+          <p className="movie-stat">
             {imdbVotes}
             <span>IMDB Votes</span>
-          </MovieStat>
-        </MovieStatistics>
-      </StyledSummary>
+          </p>
+        </div>
+      </div>
     )
 }

@@ -1,14 +1,20 @@
 import React from 'react';
 
-export default function useDebounce(func, delay = 1000 ) {
+const useDebounce=(func, delay = 1000 )=> {
   const [timeoutID, setTimeoutID] = React.useState(null);
-  return (...args) => {
-    if (timeoutID) {
-      clearTimeout(timeoutID)
-    }
-    const timeout = setTimeout(()=> {
-      func.apply(null, args);
-    }, delay)
-    setTimeoutID(timeout)
-  }
+  return React.useCallback(
+    (...args) => {
+      if (timeoutID) {
+        clearTimeout(timeoutID);
+      }
+
+      const newTimeoutID = setTimeout(() => {
+        func.apply(null, args);
+      }, delay);
+      
+      setTimeoutID(newTimeoutID);                                                  
+    },
+    [func, delay, timeoutID]
+  );
 }
+export default useDebounce;

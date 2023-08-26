@@ -1,0 +1,273 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* App.js */
+header {
+  display: flex;
+  align-items: center; /* Align items vertically in header */
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.icon {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+.display-area {
+  display: flex;
+  flex-direction: column; /* Stack columns on mobile */
+}
+
+@media (min-width: 768px) {
+  /* Styles for screens with a width of 768px and above */
+  .display-area {
+    flex-direction: column; /* Stack columns */
+  }
+  .styled-newsummary{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.autocomplete-area {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 50vw;
+}
+
+.summary-area {
+
+}
+
+.left-summary {
+  
+}
+
+.right-summary {
+  
+}
+
+.newsummary-area {
+  
+}
+
+.tutorial {
+  max-width: 60vw;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+.tutorial span {
+  margin-top: 0px;
+}
+
+/* Autocomplete.js */
+.autocomplete-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* MovieOption.js */
+.styled-movie-option {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #0033d9;
+  border-bottom: 1px solid #e3e2e2; /* Add a subtle separator */
+  cursor: pointer;
+}
+
+.styled-movie-option:last-child {
+  border-bottom: none;
+}
+
+.styled-movie-option:hover {
+  color: #000;
+  background-color: #e3e2e2; /* Highlight on hover */
+}
+
+
+.movie-option-image {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.title-year {
+  margin-left: 10px;
+}
+/* Summary.js */
+.styled-summary {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  width: auto;  
+  height: 150px;
+  margin-right: 20px;
+}
+
+
+.movie-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+  
+
+
+.movie-title {
+  font-size: 24px;
+  Margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+.movie-genre {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: bold;
+}
+
+
+.movie-plot {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.movie-statistics {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.movie-stat {
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction:column;
+  text-align: center;
+}
+
+.movie-stat span {
+  font-size: 12px;
+  color: #666;
+  margin-left: 0px;
+}
+/* NewSummary.js */
+.styled-newsummary{
+  display: flex;
+  flex-direction: column;
+}
+
+.newsummary-column {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.is-winner {
+  background-color: #90ee90;
+}
+
+.is-loser {
+  background-color: #FFCCCC;
+}
+
+@media (min-width: 768px) {
+  /* Styles for screens with a width of 768px and above */
+  .display-area {
+    flex-direction: column; /* Stack columns */
+  }
+  .styled-newsummary {
+    display: flex;
+    flex-direction: row;
+  }
+  .summary-area {
+    display: flex;
+    flex-direction: row;
+  }
+  .left-summary {
+    width: 50vw;
+  }
+  .right-summary {
+    width: 50vw;
+  }
+  .newsummary-column {
+    width: 50vw;
+  }
+}

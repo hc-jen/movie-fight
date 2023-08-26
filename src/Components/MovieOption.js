@@ -23,7 +23,7 @@ const MovieImage = styled.img`
 `;
 
 
-export default function MovieOption({poster, title, year, className, updateInput, i, setSelectedMovieData}) {
+export default function MovieOption({poster, title, year, updateInput, i, setSelectedMovieData, column}) {
   const handleOptionClick = async () => {
     updateInput(title);
     const response = await axios.get(`https://www.omdbapi.com/`, {
@@ -32,13 +32,16 @@ export default function MovieOption({poster, title, year, className, updateInput
         i: i,
       },
     });
-    setSelectedMovieData(response.data); // Set the selected movie data
+    setSelectedMovieData(prevData => ({
+      ...prevData,
+      [column]: response.data,
+    })); // Set the selected movie data
   };
 
   return (
-    <StyledMovieOption className={className} onClick={handleOptionClick}>
-      <MovieImage src={poster==='N/A'?'':poster} alt={`Poster for ${title}`} />
-      <p>{title} ({year})</p>
-      </StyledMovieOption>
+    <a className="styled-movie-option" onClick={handleOptionClick}>
+      <img className="movie-option-image" src={poster==='N/A'?'':poster} alt={`Poster for ${title}`} />
+      <p className="title-year">{title} ({year})</p>
+    </a>
   )
 }
