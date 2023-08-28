@@ -81,6 +81,7 @@ function App() {
         <span>We will tell you which is the best!</span>
       </section>}
       {/* {showSummary&&<button onClick={reset}>Reset</button>} */}
+      {/* {console.log(selectedMovieData["left"])} */}
       
     </div>
   );

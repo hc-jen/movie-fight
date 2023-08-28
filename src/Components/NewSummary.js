@@ -20,9 +20,11 @@ export default function NewSummary({left, right}) {
               {left.Awards?left.Awards:`N/A`}
               <span>Awards</span>
             </p>
-            <p className={`movie-stat ${parseInt(left.BoxOffice.replace(/\$/g,'').replace(/,/g,''))>parseInt(right.BoxOffice.replace(/\$/g,'').replace(/,/g,''))?"is-winner":"is-loser"}`}>
+            <p className={left.BoxOffice&&right.BoxOffice&& `${parseInt(left.BoxOffice.replace(/\$/g,'').replace(/,/g,''))>parseInt(right.BoxOffice.replace(/\$/g,'').replace(/,/g,''))?"is-winner":"is-loser"}`}>
+              <p className="movie-stat">
               {left.BoxOffice?left.BoxOffice:`N/A`}
               <span>US Box Office</span>
+              </p>
             </p>
             <p className={`movie-stat ${parseInt(left.Metascore)>parseInt(right.Metascore)?"is-winner":"is-loser"}`}>
               {left.Metascore}
@@ -58,9 +60,11 @@ export default function NewSummary({left, right}) {
               {right.Awards?right.Awards:`N/A`}
               <span>Awards</span>
             </p>
-            <p className={`movie-stat ${parseInt(right.BoxOffice.replace(/\$/g,'').replace(/,/g,''))>left.BoxOffice.replace(/\$/g,'').replace(/,/g,'')?"is-winner":"is-loser"}`}>
-              {right.BoxOffice?right.BoxOffice:`N/A`}
-              <span>US Box Office</span>
+            <p className={left.BoxOffice&&right.BoxOffice&&` ${parseInt(right.BoxOffice.replace(/\$/g,'').replace(/,/g,''))>left.BoxOffice.replace(/\$/g,'').replace(/,/g,'')?"is-winner":"is-loser"}`}>
+              <p className="movie-stat">
+                {right.BoxOffice?right.BoxOffice:`N/A`}
+                <span>US Box Office</span>
+              </p>
             </p>
             <p className={`movie-stat ${parseInt(right.Metascore)>parseInt(left.Metascore)?"is-winner":"is-loser"}`}>
               {right.Metascore}
