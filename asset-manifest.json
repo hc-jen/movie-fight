@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movie-fight/static/css/main.5f12cedf.css",
-    "main.js": "/movie-fight/static/js/main.f4a8aad9.js",
+    "main.js": "/movie-fight/static/js/main.920774d3.js",
     "static/js/787.b96227b3.chunk.js": "/movie-fight/static/js/787.b96227b3.chunk.js",
     "index.html": "/movie-fight/index.html",
     "main.5f12cedf.css.map": "/movie-fight/static/css/main.5f12cedf.css.map",
-    "main.f4a8aad9.js.map": "/movie-fight/static/js/main.f4a8aad9.js.map",
+    "main.920774d3.js.map": "/movie-fight/static/js/main.920774d3.js.map",
     "787.b96227b3.chunk.js.map": "/movie-fight/static/js/787.b96227b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f12cedf.css",
-    "static/js/main.f4a8aad9.js"
+    "static/js/main.920774d3.js"
   ]
 }
